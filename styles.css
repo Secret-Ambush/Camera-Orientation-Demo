@@ -39,13 +39,24 @@ input[type="range"] {
   justify-content: center;
   align-items: flex-end;
   height: 400px;
-  background: #2d3742;
+  background: linear-gradient(to bottom, #87CEEB 0%, #98D8E8 40%, #B6E5D8 100%);
   position: relative;
   margin: 2em auto 0 auto;
   width: 100%;
   max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 2px 16px #1118;
+  overflow: hidden;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, #7CB342 0%, #4CAF50 50%, #2E7D32 100%);
+  border-radius: 0 0 12px 12px;
 }
 
 .camera-emoji {
@@ -54,7 +65,8 @@ input[type="range"] {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
+  bottom: 60px;
   will-change: transform, bottom;
   user-select: none;
+  z-index: 10;
 }

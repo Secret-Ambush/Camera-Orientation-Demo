@@ -33,8 +33,8 @@ function updateCamera() {
     `skewX(${-p/2}deg) ` +
     `skewY(${r/3}deg)`;
 
-  // Move camera up/down
-  camera.style.bottom = `${hei}px`;
+  // Move camera up/down (60px accounts for ground height)
+  camera.style.bottom = `${60 + hei}px`;
 }
 
 // Add event listeners
